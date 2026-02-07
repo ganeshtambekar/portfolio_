@@ -69,149 +69,169 @@ const Hero = () => {
         >
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'minmax(140px, 220px) 1fr',
-            gap: '2rem',
-            alignItems: 'center'
+            gridTemplateColumns: '200px 1fr',
+            gap: '3rem',
+            alignItems: 'start'
           }}>
             {/* Profile Photo */}
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <motion.img
-                src="/ganesh.png"
-                alt="Profile"
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.8 }}
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              style={{
+                position: 'relative',
+                width: '200px',
+                height: '200px',
+                marginTop: '2rem'
+              }}
+            >
+              <img
+                src="/ganesh.jpg"
+                alt="Ganesh Tambekar"
                 style={{
-                  width: '180px',
-                  height: '180px',
+                  width: '100%',
+                  height: '130%',
                   borderRadius: '50%',
                   objectFit: 'cover',
                   border: '4px solid var(--color-accent-dim)',
                   boxShadow: '0 10px 40px rgba(0,0,0,0.6)'
                 }}
               />
-            </div>
+             
+              <div style={{
+                position: 'absolute',
+                top: '-10px',
+                left: '-10px',
+                right: '-10px',
+                bottom: '-10px',
+                borderRadius: '50%',
+                background: 'radial-gradient(circle, rgba(0, 255, 136, 0.2), transparent 70%)',
+                filter: 'blur(20px)',
+                zIndex: -1,
+                pointerEvents: 'none'
+              }} />
+            </motion.div>
 
             <div>
-          {/* Greeting */}
-          <motion.div variants={itemVariants}>
-            <p style={{ 
-              color: 'var(--color-accent)', 
-              fontSize: '1.1rem', 
-              fontWeight: 600,
-              marginBottom: '1rem',
-              letterSpacing: '0.05em'
-            }}>
-              👋 HEY THERE, I'M
-            </p>
-          </motion.div>
+              {/* Greeting */}
+              <motion.div variants={itemVariants}>
+                <p style={{ 
+                  color: 'var(--color-accent)', 
+                  fontSize: '1.1rem', 
+                  fontWeight: 600,
+                  marginBottom: '1rem',
+                  letterSpacing: '0.05em'
+                }}>
+                  👋 HEY THERE, I'M
+                </p>
+              </motion.div>
 
-          {/* Name */}
-          <motion.h1 
-            variants={itemVariants}
-            style={{ 
-              fontSize: 'clamp(3rem, 8vw, 6rem)', 
-              marginBottom: '1rem',
-              fontWeight: 800,
-              letterSpacing: '-0.02em'
-            }}
-          >
-            Ganesh <span className="gradient-text">Tambekar</span>
-          </motion.h1>
+              {/* Name */}
+              <motion.h1 
+                variants={itemVariants}
+                style={{ 
+                  fontSize: 'clamp(3rem, 8vw, 6rem)', 
+                  marginBottom: '1rem',
+                  fontWeight: 800,
+                  letterSpacing: '-0.02em'
+                }}
+              >
+                Ganesh <span className="gradient-text">Tambekar</span>
+              </motion.h1>
 
-          {/* Role */}
-          <motion.h2 
-            variants={itemVariants}
-            style={{ 
-              fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', 
-              color: 'var(--color-text-secondary)',
-              marginBottom: '1.5rem',
-              fontWeight: 600
-            }}
-          >
-            Full Stack Developer & Problem Solver
-          </motion.h2>
+              {/* Role */}
+              <motion.h2 
+                variants={itemVariants}
+                style={{ 
+                  fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', 
+                  color: 'var(--color-text-secondary)',
+                  marginBottom: '1.5rem',
+                  fontWeight: 600
+                }}
+              >
+                Full Stack Developer & Problem Solver
+              </motion.h2>
 
-          {/* Tagline */}
-          <motion.p 
-            variants={itemVariants}
-            style={{ 
-              fontSize: '1.2rem', 
-              color: 'var(--color-text-secondary)',
-              marginBottom: '2.5rem',
-              maxWidth: '700px',
-              lineHeight: '1.8'
-            }}
-          >
-            Crafting scalable web applications with modern technologies. 
-            Passionate about building solutions that make a difference, 
-            from AI-powered platforms to microservice architectures.
-          </motion.p>
+              {/* Tagline */}
+              <motion.p 
+                variants={itemVariants}
+                style={{ 
+                  fontSize: '1.2rem', 
+                  color: 'var(--color-text-secondary)',
+                  marginBottom: '2.5rem',
+                  maxWidth: '700px',
+                  lineHeight: '1.8'
+                }}
+              >
+                Crafting scalable web applications with modern technologies. 
+                Passionate about building solutions that make a difference, 
+                from AI-powered platforms to microservice architectures.
+              </motion.p>
 
-          {/* CTA Buttons */}
-          <motion.div 
-            variants={itemVariants}
-            style={{ 
-              display: 'flex', 
-              gap: '1rem', 
-              flexWrap: 'wrap',
-              marginBottom: '3rem'
-            }}
-          >
-            <a href="#projects" className="btn btn-primary">
-              View My Work
-            </a>
-            <a href="#contact" className="btn btn-secondary">
-              Get In Touch
-            </a>
-          </motion.div>
+              {/* CTA Buttons */}
+              <motion.div 
+                variants={itemVariants}
+                style={{ 
+                  display: 'flex', 
+                  gap: '1rem', 
+                  flexWrap: 'wrap',
+                  marginBottom: '3rem'
+                }}
+              >
+                <a href="#projects" className="btn btn-primary">
+                  View My Work
+                </a>
+                <a href="#contact" className="btn btn-secondary">
+                  Get In Touch
+                </a>
+              </motion.div>
 
-          {/* Social Links */}
-          <motion.div 
-            variants={itemVariants}
-            style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}
-          >
-            <a 
-              href="https://github.com/ganeshtambekar" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              style={{ 
-                fontSize: '1.5rem',
-                transition: 'all 0.3s',
-                color: 'var(--color-text-secondary)'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-accent)'}
-              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-text-secondary)'}
-            >
-              <FiGithub />
-            </a>
-            <a 
-              href="https://linkedin.com/in/tambekarganesh" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              style={{ 
-                fontSize: '1.5rem',
-                transition: 'all 0.3s',
-                color: 'var(--color-text-secondary)'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-accent)'}
-              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-text-secondary)'}
-            >
-              <FiLinkedin />
-            </a>
-            <a 
-              href="mailto:ganesh.tambekar124@gmail.com"
-              style={{ 
-                fontSize: '1.5rem',
-                transition: 'all 0.3s',
-                color: 'var(--color-text-secondary)'
-              }}
-              onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-accent)'}
-              onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-text-secondary)'}
-            >
-              <FiMail />
-            </a>
-          </motion.div>
+              {/* Social Links */}
+              <motion.div 
+                variants={itemVariants}
+                style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}
+              >
+                <a 
+                  href="https://github.com/ganeshtambekar" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{ 
+                    fontSize: '1.5rem',
+                    transition: 'all 0.3s',
+                    color: 'var(--color-text-secondary)'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-accent)'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-text-secondary)'}
+                >
+                  <FiGithub />
+                </a>
+                <a 
+                  href="https://linkedin.com/in/tambekarganesh" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{ 
+                    fontSize: '1.5rem',
+                    transition: 'all 0.3s',
+                    color: 'var(--color-text-secondary)'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-accent)'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-text-secondary)'}
+                >
+                  <FiLinkedin />
+                </a>
+                <a 
+                  href="mailto:ganesh.tambekar124@gmail.com"
+                  style={{ 
+                    fontSize: '1.5rem',
+                    transition: 'all 0.3s',
+                    color: 'var(--color-text-secondary)'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.color = 'var(--color-accent)'}
+                  onMouseLeave={(e) => e.currentTarget.style.color = 'var(--color-text-secondary)'}
+                >
+                  <FiMail />
+                </a>
+              </motion.div>
             </div>
           </div>
         </motion.div>
@@ -240,6 +260,19 @@ const Hero = () => {
           <FiArrowDown />
         </motion.div>
       </motion.a>
+
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .section > div > div > div {
+            grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+            text-align: center;
+          }
+          .section img {
+            margin: 0 auto;
+          }
+        }
+      `}</style>
     </section>
   );
 };

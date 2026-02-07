@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiMail, FiGithub, FiLinkedin, FiMapPin, FiPhone, FiSend } from 'react-icons/fi';
+import { FiMail, FiGithub, FiLinkedin, FiMapPin, FiPhone, FiSend, FiCode, FiInstagram } from 'react-icons/fi';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -83,6 +83,18 @@ const Contact = () => {
       label: 'LinkedIn',
       link: 'https://linkedin.com/in/tambekarganesh',
       color: '#0077b5'
+    },
+    {
+      icon: FiCode,
+      label: 'LeetCode',
+      link: 'https://leetcode.com/u/shiva_1914/',
+      color: '#FFA116'
+    },
+    {
+      icon: FiInstagram,
+      label: 'Instagram',
+      link: 'https://instagram.com/ganesh_t.12',
+      color: '#E4405F'
     }
   ];
 
@@ -204,7 +216,8 @@ const Contact = () => {
               </h4>
               <div style={{ 
                 display: 'flex', 
-                gap: '1rem'
+                gap: '1rem',
+                flexWrap: 'wrap'
               }}>
                 {socialLinks.map((social, idx) => (
                   <motion.a

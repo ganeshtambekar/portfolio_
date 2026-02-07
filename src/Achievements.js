@@ -51,13 +51,6 @@ const Achievements = () => {
       description: 'Built a secure offline fintech payment system using Node.js at Cummins Hackathon',
       color: '#4facfe',
       highlight: 'Runner-up'
-    },
-    {
-      icon: FiStar,
-      title: 'Gold Medalist',
-      description: 'Achieved Gold Medal in Diploma Computer Engineering at GP Jalna',
-      color: '#00ff88',
-      highlight: 'Gold Medal'
     }
   ];
 
