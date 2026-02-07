@@ -86,7 +86,7 @@ const Hero = () => {
               }}
             >
               <img
-                src="/ganesh.jpg"
+                src={`${process.env.PUBLIC_URL}/ganesh.jpg`}
                 alt="Ganesh Tambekar"
                 style={{
                   width: '100%',
