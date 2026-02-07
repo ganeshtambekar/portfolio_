@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FiAward, FiTrendingUp, FiUsers, FiStar } from 'react-icons/fi';
+import { FiAward, FiTrendingUp, FiUsers } from 'react-icons/fi';
 
 const Achievements = () => {
   const ref = useRef(null);
