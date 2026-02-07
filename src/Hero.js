@@ -76,7 +76,7 @@ const Hero = () => {
             {/* Profile Photo */}
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <motion.img
-                src="/profile-placeholder.svg"
+                src="/profile-placeholder.svg.jpg"
                 alt="Profile"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
