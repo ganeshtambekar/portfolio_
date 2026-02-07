@@ -67,6 +67,32 @@ const Hero = () => {
           animate="visible"
           style={{ maxWidth: '900px' }}
         >
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'minmax(140px, 220px) 1fr',
+            gap: '2rem',
+            alignItems: 'center'
+          }}>
+            {/* Profile Photo */}
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <motion.img
+                src="/profile-placeholder.svg"
+                alt="Profile"
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                style={{
+                  width: '180px',
+                  height: '180px',
+                  borderRadius: '50%',
+                  objectFit: 'cover',
+                  border: '4px solid var(--color-accent-dim)',
+                  boxShadow: '0 10px 40px rgba(0,0,0,0.6)'
+                }}
+              />
+            </div>
+
+            <div>
           {/* Greeting */}
           <motion.div variants={itemVariants}>
             <p style={{ 
@@ -186,6 +212,8 @@ const Hero = () => {
               <FiMail />
             </a>
           </motion.div>
+            </div>
+          </div>
         </motion.div>
       </div>
 
